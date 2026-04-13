@@ -22,5 +22,19 @@ namespace REST_DanmarksRadio.Controllers
         {
             return Ok(_repository.GetAll());
         }
+        // GET: api/DR/{id}
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult GetById(int id)
+        {
+            var dr = _repository.GetById(id);
+            if (dr == null)
+            {
+                return NotFound();
+            }
+            return Ok(dr);
+        }
+
     }
 }

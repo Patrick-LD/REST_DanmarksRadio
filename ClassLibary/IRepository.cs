@@ -10,5 +10,6 @@ namespace ClassLibary
     public interface IRepository
     {
         List<DR> GetAll();
+        DR? GetById(int id);
     }
 }
