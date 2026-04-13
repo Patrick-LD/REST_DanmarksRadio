@@ -6,11 +6,41 @@ using System.Threading.Tasks;
 
 namespace ClassLibary
 {
-    public class Repository
+    public class Repository : IRepository
     {
         private int nextId = 0;
-        private readonly List<REST_DanmarksRadio.Models.DR> _DRs = new List<REST_DanmarksRadio.Models.DR>();
+        private readonly List<REST_DanmarksRadio.Models.DR> _DRs;
 
+        public Repository()
+        {
+            _DRs = new List<REST_DanmarksRadio.Models.DR>
+            {
+                new REST_DanmarksRadio.Models.DR
+                {
+                    Id = 1,
+                    Title = "Smells Like Teen Spirit",
+                    Artist = "Nirvana",
+                    Duration = 301,
+                    publishedYear = 1991
+                },
+                new REST_DanmarksRadio.Models.DR
+                {
+                    Id = 2,
+                    Title = "Bohemian Rhapsody",
+                    Artist = "Queen",
+                    Duration = 354,
+                    publishedYear = 1975
+                },
+                new REST_DanmarksRadio.Models.DR
+                {
+                    Id = 3,
+                    Title = "Billie Jean",
+                    Artist = "Michael Jackson",
+                    Duration = 294,
+                    publishedYear = 1982
+                }
+            };
+        }
 
         public List<REST_DanmarksRadio.Models.DR> GetAll()
         {

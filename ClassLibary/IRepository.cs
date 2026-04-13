@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibary
 {
-    internal interface IRepository
+    public interface IRepository
     {
     }
 }

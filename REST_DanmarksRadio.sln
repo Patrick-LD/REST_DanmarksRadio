@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST_DanmarksRadio", "REST_DanmarksRadio\REST_DanmarksRadio.csproj", "{3ADEE957-B9A8-43AD-A866-C79674BA6B66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibary", "ClassLibary\ClassLibary.csproj", "{7EFBBC7C-9D48-42CE-9C1E-25A7B851531F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{787177A5-2A94-4660-B419-2880048C1E4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7EFBBC7C-9D48-42CE-9C1E-25A7B851531F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EFBBC7C-9D48-42CE-9C1E-25A7B851531F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EFBBC7C-9D48-42CE-9C1E-25A7B851531F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{787177A5-2A94-4660-B419-2880048C1E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787177A5-2A94-4660-B419-2880048C1E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787177A5-2A94-4660-B419-2880048C1E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787177A5-2A94-4660-B419-2880048C1E4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

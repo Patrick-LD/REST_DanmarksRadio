@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\REST_DanmarksRadio\REST_DanmarksRadio.csproj" />
-  </ItemGroup>
-
 </Project>
