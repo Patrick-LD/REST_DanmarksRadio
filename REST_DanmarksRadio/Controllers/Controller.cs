@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ClassLibary;
+using System.Reflection;
 
 namespace REST_DanmarksRadio.Controllers
 {
@@ -36,5 +37,14 @@ namespace REST_DanmarksRadio.Controllers
             return Ok(dr);
         }
 
+        [HttpGet("title/{title}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
+        public ActionResult GetByTitle(string title)
+        {
+            return Ok(_repository.GetByTitle(title));
+
+        }
     }
 }
+
