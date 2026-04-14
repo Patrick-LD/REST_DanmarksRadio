@@ -52,5 +52,10 @@ namespace ClassLibary
             return _DRs.FirstOrDefault(d => d.Id == id);
         }
 
+        public List<REST_DanmarksRadio.Models.DR> GetByTitle(string title)
+        {
+            return _DRs.Where(d => d.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
     }
 }
