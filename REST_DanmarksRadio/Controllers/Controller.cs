@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ClassLibary;
+using REST_DanmarksRadio.Models;
 using System.Reflection;
 
 namespace REST_DanmarksRadio.Controllers
@@ -44,6 +45,15 @@ namespace REST_DanmarksRadio.Controllers
         {
             return Ok(_repository.GetByTitle(title));
 
+        }
+
+        
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public ActionResult<DR> Add(DR dr)
+        {
+            var created = _repository.Add(dr);
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
     }
 }
