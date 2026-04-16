@@ -72,7 +72,7 @@ namespace REST_DanmarksRadio.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<DR> Update(int id, DR dr)
+        public ActionResult<DR> Update(int id, [FromBody] DR dr)
         {
             var updated = _repository.Update(id, dr);
             if (updated == null)
