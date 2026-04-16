@@ -59,5 +59,28 @@ namespace ClassLibary
             return dr;
         }
 
+        public DR Delete(int id)
+        {
+            var dr = GetById(id);
+            if (dr != null)
+            {
+                _DRs.Remove(dr);
+            }
+            return dr;
+        }
+
+        public DR Update(int id, DR updatedDR)
+        {
+            var dr = GetById(id);
+            if (dr != null)
+            {
+                dr.Title = updatedDR.Title;
+                dr.Artist = updatedDR.Artist;
+                dr.Duration = updatedDR.Duration;
+                dr.PublishedYear = updatedDR.PublishedYear;
+            }
+            return dr;
+        }
+
     }
 }

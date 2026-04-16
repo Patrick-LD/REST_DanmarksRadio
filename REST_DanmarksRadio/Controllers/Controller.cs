@@ -55,6 +55,32 @@ namespace REST_DanmarksRadio.Controllers
             var created = _repository.Add(dr);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<DR> Delete(int id)
+        {
+            var deleted = _repository.Delete(id);
+            if (deleted == null)
+            {
+                return NotFound();
+            }
+            return Ok(deleted);
+        }
+
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<DR> Update(int id, [FromBody] DR dr)
+        {
+            var updated = _repository.Update(id, dr);
+            if (updated == null)
+            {
+                return NotFound();
+            }
+            return Ok(updated);
+        }
     }
 }
 
