@@ -56,5 +56,35 @@ namespace UnitTest
             Assert.Equal("Eagles", result.Artist);
             Assert.Equal(4, _repository.GetAll().Count);
         }
+        [Fact]
+        public void Delete_Test()
+        {
+            var result = _repository.Delete(2);
+
+            Assert.NotNull(result);
+            Assert.Equal(2, result.Id);
+            Assert.Equal("Bohemian Rhapsody", result.Title);
+            Assert.Equal("Queen", result.Artist);
+            Assert.Equal(3, _repository.GetAll().Count);
+        }
+
+        [Fact]
+        public void Update_Test()
+        {
+            var updatedDr = new DR
+            {
+                Title = "Smells Like Teen Spirit (Remastered)",
+                Artist = "Nirvana",
+                Duration = 301,
+                PublishedYear = 1991
+            };
+
+            var result = _repository.Update(1, updatedDr);
+
+            Assert.NotNull(result);
+            Assert.Equal(1, result.Id);
+            Assert.Equal("Smells Like Teen Spirit (Remastered)", result.Title);
+            Assert.Equal("Nirvana", result.Artist);
+        }
     }
 }
