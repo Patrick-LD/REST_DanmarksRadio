@@ -36,5 +36,25 @@ namespace UnitTest
             Assert.Equal("Queen", drs[0].Artist);
 
         }
+
+        [Fact]
+        public void Add_Test()
+        {
+            var newDr = new DR
+            {
+                Title = "Hotel California",
+                Artist = "Eagles",
+                Duration = 391,
+                PublishedYear = 1977
+            };
+
+            var result = _repository.Add(newDr);
+
+            Assert.NotNull(result);
+            Assert.Equal(4, result.Id);
+            Assert.Equal("Hotel California", result.Title);
+            Assert.Equal("Eagles", result.Artist);
+            Assert.Equal(4, _repository.GetAll().Count);
+        }
     }
 }
