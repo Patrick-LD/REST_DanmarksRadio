@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using REST_DanmarksRadio.Models;
 
 namespace ClassLibary
 {
-    internal class DB_Context
+    public class DB_Context : DbContext
     {
+        public DB_Context(DbContextOptions<DB_Context> options) : base(options)
+        {
+        }
+
+        public DbSet<DR> DRs { get; set; }
     }
 }

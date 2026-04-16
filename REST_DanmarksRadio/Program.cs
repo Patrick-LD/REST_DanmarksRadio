@@ -1,4 +1,5 @@
 using ClassLibary;
+using Microsoft.EntityFrameworkCore;
 
 namespace REST_DanmarksRadio
 {
@@ -13,7 +14,9 @@ namespace REST_DanmarksRadio
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
-            builder.Services.AddScoped<IRepository, Repository>();
+            builder.Services.AddDbContext<DB_Context>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IRepository, DB_Repo>();
 
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
