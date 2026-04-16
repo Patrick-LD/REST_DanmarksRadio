@@ -13,5 +13,8 @@ namespace ClassLibary
         DR? GetById(int id);
         List<DR> GetByTitle(string title);
         DR Add(DR dr);
+        DR Delete(int id);
+
+        DR Update(int id, DR dr);
     }
 }
