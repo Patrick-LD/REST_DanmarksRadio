@@ -1,5 +1,4 @@
-﻿
-using ClassLibary;
+﻿using ClassLibary.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;

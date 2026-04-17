@@ -1,4 +1,5 @@
 using ClassLibary;
+using ClassLibary.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace REST_DanmarksRadio
