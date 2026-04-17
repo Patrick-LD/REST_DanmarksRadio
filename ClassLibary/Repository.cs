@@ -9,8 +9,8 @@ namespace ClassLibary
 {
     public class Repository : IRepository
     {
-        private static int nextId = 4;
-        private static readonly List<ClassLibary.Models.DR> _DRs = new List<ClassLibary.Models.DR>
+        private int nextId = 3;
+        private readonly List<ClassLibary.Models.DR> _DRs = new List<ClassLibary.Models.DR>
         {
             new ClassLibary.Models.DR
             {

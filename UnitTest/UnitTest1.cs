@@ -65,7 +65,7 @@ namespace UnitTest
             Assert.Equal(2, result.Id);
             Assert.Equal("Bohemian Rhapsody", result.Title);
             Assert.Equal("Queen", result.Artist);
-            Assert.Equal(3, _repository.GetAll().Count);
+            Assert.Equal(2, _repository.GetAll().Count);
         }
 
         [Fact]
