@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using REST_DanmarksRadio.Models;
+using ClassLibary.Models;
 
 namespace ClassLibary
 {

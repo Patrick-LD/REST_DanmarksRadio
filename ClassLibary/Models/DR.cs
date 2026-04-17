@@ -1,4 +1,4 @@
-﻿namespace REST_DanmarksRadio.Models
+﻿namespace ClassLibary.Models
 {
     public class DR
     {

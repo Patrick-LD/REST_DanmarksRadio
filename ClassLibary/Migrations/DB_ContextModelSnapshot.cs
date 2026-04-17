@@ -20,7 +20,7 @@ namespace ClassLibary.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("REST_DanmarksRadio.Models.DR", b =>
+            modelBuilder.Entity("ClassLibary.Models.DR", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

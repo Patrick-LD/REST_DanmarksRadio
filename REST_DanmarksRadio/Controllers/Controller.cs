@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ClassLibary;
-using REST_DanmarksRadio.Models;
+using ClassLibary.Models;
 using System.Reflection;
 
 namespace REST_DanmarksRadio.Controllers

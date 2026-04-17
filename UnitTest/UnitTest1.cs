@@ -1,5 +1,5 @@
 ﻿using ClassLibary;
-using REST_DanmarksRadio.Models;
+using ClassLibary.Models;
 
 namespace UnitTest
 {
